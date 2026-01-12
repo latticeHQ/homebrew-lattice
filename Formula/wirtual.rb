@@ -9,22 +9,22 @@ class Wirtual < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/latticeHQ/lattice-runtime/releases/download/v5.2.2/wirtual_5.2.2_darwin_arm64.zip"
-      sha256 "6fa75fa0d882615cc1391680a62c22b9d8b9853cbc04ac7c731bae1304e8173b"
+      sha256 "a6fc802788c36c0737261d83ffabdc517f160c73aa4c497fd4112db57aa70caf"
     end
     if Hardware::CPU.intel?
       url "https://github.com/latticeHQ/lattice-runtime/releases/download/v5.2.2/wirtual_5.2.2_darwin_amd64.zip"
-      sha256 "86816856de9f7f64ae627f4e678af22e4b404949a342fd0614e6db862f50a7ae"
+      sha256 "9abc3a49e42abc2d7163a1568f0d33175666be45f32ae166488b3031ff8f7d59"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/latticeHQ/lattice-runtime/releases/download/v5.2.2/wirtual_5.2.2_linux_arm64.tar.gz"
-      sha256 "6cbb0e75a1c0c597e37d7b8fd545a365f23d84e08fbd9de71c61b686a5544a2d"
+      sha256 "2779e85f944f82b97bf1b1584ff59b5f7e935f9efa9c148463d810f35b965c39"
     end
     if Hardware::CPU.intel?
       url "https://github.com/latticeHQ/lattice-runtime/releases/download/v5.2.2/wirtual_5.2.2_linux_amd64.tar.gz"
-      sha256 "7063a4b33f024ea077ff84e11a87e32c886caac67eb1c20cd7dc4ec7d425f59e"
+      sha256 "c3772a5e43fe0655c6a0b62ca6f369dcd7405b4819fc5e378db33211bea2db8b"
     end
   end
 
