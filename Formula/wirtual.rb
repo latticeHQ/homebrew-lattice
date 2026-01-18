@@ -4,27 +4,27 @@
 class Wirtual < Formula
   desc "A self-hosted remote development platform"
   homepage "https://wirtual.dev"
-  version "5.3.0"
+  version "5.4.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/latticeHQ/lattice-runtime/releases/download/v5.3.0/wirtual_5.3.0_darwin_arm64.zip"
-      sha256 "dc04d8b33854b7dba94ed2a43925a3db29b6bc8c6d67d47f3aa72a12375de574"
+      url "https://github.com/latticeHQ/lattice-runtime/releases/download/v5.4.0/wirtual_5.4.0_darwin_arm64.zip"
+      sha256 "b483390cb2645361978ec25b0fec6ebc3f1c26c5589bbda68d579ad52572b296"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/latticeHQ/lattice-runtime/releases/download/v5.3.0/wirtual_5.3.0_darwin_amd64.zip"
-      sha256 "1cb5928c34527851b55eacb024a0712e6cdd774fb36983bf38e0aedf13541a3f"
+      url "https://github.com/latticeHQ/lattice-runtime/releases/download/v5.4.0/wirtual_5.4.0_darwin_amd64.zip"
+      sha256 "4e3397ef1d172ad1f4ef90f6fc6ec015f804fc2e2040f31a20314e7cc61e6c33"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/latticeHQ/lattice-runtime/releases/download/v5.3.0/wirtual_5.3.0_linux_arm64.tar.gz"
-      sha256 "c1b0595235ea69394086d3b146adbd2a70b32192431e4222340f96cded92e340"
+      url "https://github.com/latticeHQ/lattice-runtime/releases/download/v5.4.0/wirtual_5.4.0_linux_arm64.tar.gz"
+      sha256 "c77acd5941247050868e0e195a35f1b2011a56cfba1039f92b1209a32ac03c5d"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/latticeHQ/lattice-runtime/releases/download/v5.3.0/wirtual_5.3.0_linux_amd64.tar.gz"
-      sha256 "2dd049f95e917d067f3c2dd378c7961808e1fd12f30cb37bc16d0af9a46ab736"
+      url "https://github.com/latticeHQ/lattice-runtime/releases/download/v5.4.0/wirtual_5.4.0_linux_amd64.tar.gz"
+      sha256 "107a20c97b203fb0d5803fae9fae889f2325371dd23815af5c04aed089726132"
     end
   end
 
