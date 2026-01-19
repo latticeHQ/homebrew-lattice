@@ -1,23 +1,34 @@
-# Wirtualdev Homebrew Tap
+# Lattice Homebrew Tap
 
-Official Homebrew tap for [Wirtualdev](https://wirtual.dev).
+Official Homebrew tap for [Lattice Runtime](https://latticeruntime.com) - runtime enforcement and identity infrastructure for autonomous AI agents.
 
 ## Installation
 
 ```bash
-brew install wirtualdev/wirtual/wirtual
+brew tap latticeHQ/lattice
+brew install lattice
+```
+
+Or install directly:
+
+```bash
+brew install latticeHQ/lattice/lattice
 ```
 
 ## Upgrade
 
 ```bash
-brew upgrade wirtual
+brew upgrade lattice
 ```
 
 ## Usage
 
 ```bash
-wirtual --help
+lattice --help
 ```
 
-For more information, visit [wirtual.dev/docs](https://wirtual.dev/docs).
+## About Lattice
+
+Lattice is a runtime enforcement layer that applies identity, authorization, audit, and deployment constraints to AI agents. It sits in the execution path, so violations are blocked by design, not by application code.
+
+For more information, visit [latticeruntime.com](https://latticeruntime.com).

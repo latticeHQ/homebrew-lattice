@@ -12,44 +12,44 @@ DARWIN_ARM_SHA=$2
 DARWIN_INTEL_SHA=$3
 LINUX_SHA=$4
 
-# Update Formula/wirtual.rb
-cat > Formula/wirtual.rb << EOF
+# Update Formula/lattice.rb
+cat > Formula/lattice.rb << EOF
 # typed: false
 # frozen_string_literal: true
 
-class Wirtual < Formula
-  desc "A self-hosted remote development platform"
-  homepage "https://wirtual.dev"
+class Lattice < Formula
+  desc "Runtime enforcement and identity infrastructure for autonomous AI agents"
+  homepage "https://latticeruntime.com"
   version "${VERSION}"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/wirtualdev/wirtualdev/releases/download/v${VERSION}/wirtual_${VERSION}_darwin_arm64.zip"
+      url "https://github.com/latticeHQ/latticeRuntime/releases/download/v${VERSION}/lattice_${VERSION}_darwin_arm64.zip"
       sha256 "${DARWIN_ARM_SHA}"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/wirtualdev/wirtualdev/releases/download/v${VERSION}/wirtual_${VERSION}_darwin_amd64.zip"
+      url "https://github.com/latticeHQ/latticeRuntime/releases/download/v${VERSION}/lattice_${VERSION}_darwin_amd64.zip"
       sha256 "${DARWIN_INTEL_SHA}"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/wirtualdev/wirtualdev/releases/download/v${VERSION}/wirtual_${VERSION}_linux_arm64.tar.gz"
+      url "https://github.com/latticeHQ/latticeRuntime/releases/download/v${VERSION}/lattice_${VERSION}_linux_arm64.tar.gz"
       sha256 "${LINUX_SHA}"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/wirtualdev/wirtualdev/releases/download/v${VERSION}/wirtual_${VERSION}_linux_amd64.tar.gz"
+      url "https://github.com/latticeHQ/latticeRuntime/releases/download/v${VERSION}/lattice_${VERSION}_linux_amd64.tar.gz"
       sha256 "${LINUX_SHA}"
     end
   end
 
   def install
-    bin.install "wirtual"
+    bin.install "lattice"
   end
 
   test do
-    system "#{bin}/wirtual", "version"
+    system "#{bin}/lattice", "version"
   end
 end
 EOF
