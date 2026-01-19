@@ -4,27 +4,27 @@
 class Lattice < Formula
   desc "Runtime enforcement and identity infrastructure for autonomous AI agents"
   homepage "https://latticeruntime.com"
-  version "5.4.0"
+  version "0.3.2"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/latticeHQ/lattice/releases/download/v5.4.0/lattice_5.4.0_darwin_arm64.zip"
-      sha256 "b483390cb2645361978ec25b0fec6ebc3f1c26c5589bbda68d579ad52572b296"
+      url "https://github.com/latticeHQ/lattice-runtime/releases/download/v0.3.2/lattice_0.3.2_darwin_arm64.zip"
+      sha256 "5c1b034583c233dbab38111c2edaec974730c2b454fc7c37a7cb502c85de2b16"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/latticeHQ/lattice/releases/download/v5.4.0/lattice_5.4.0_darwin_amd64.zip"
-      sha256 "4e3397ef1d172ad1f4ef90f6fc6ec015f804fc2e2040f31a20314e7cc61e6c33"
+      url "https://github.com/latticeHQ/lattice-runtime/releases/download/v0.3.2/lattice_0.3.2_darwin_amd64.zip"
+      sha256 "02c0def1b907b7ed5bf4137fb61c8e1acf150af8d828ed51363650353b653d2f"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/latticeHQ/lattice/releases/download/v5.4.0/lattice_5.4.0_linux_arm64.tar.gz"
-      sha256 "c77acd5941247050868e0e195a35f1b2011a56cfba1039f92b1209a32ac03c5d"
+      url "https://github.com/latticeHQ/lattice-runtime/releases/download/v0.3.2/lattice_0.3.2_linux_arm64.tar.gz"
+      sha256 "a6082058890c4eb2081302fe0ee4274259a8cf23e85734bf6cbe938bede9c5ba"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/latticeHQ/lattice/releases/download/v5.4.0/lattice_5.4.0_linux_amd64.tar.gz"
-      sha256 "107a20c97b203fb0d5803fae9fae889f2325371dd23815af5c04aed089726132"
+      url "https://github.com/latticeHQ/lattice-runtime/releases/download/v0.3.2/lattice_0.3.2_linux_amd64.tar.gz"
+      sha256 "cdc3841d0494d3f095820beb071082e6402ac14c94e5520da7f57244913ca43e"
     end
   end
 
