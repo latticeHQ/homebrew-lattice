@@ -4,27 +4,27 @@
 class Lattice < Formula
   desc "A self-hosted remote development platform"
   homepage "https://latticeruntime.com"
-  version "0.4.1"
+  version "0.6.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/latticeHQ/lattice-runtime/releases/download/v0.4.1/lattice_0.4.1_darwin_arm64.zip"
-      sha256 "34d83669c2c683e00f0999e27d996d13db4aeccf7be6826a17eb6f2b39864b12"
+      url "https://github.com/latticeHQ/lattice-runtime/releases/download/v0.6.0/lattice_0.6.0_darwin_arm64.zip"
+      sha256 "2651ed18de5fd8fed1635a52c206365d5b02dec801c5f7717e162f1081377d8c"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/latticeHQ/lattice-runtime/releases/download/v0.4.1/lattice_0.4.1_darwin_amd64.zip"
-      sha256 "b1700352e4b0a7ecc6a06adf84b676eb8d4eb75e7d0a100a0e3135eacf6f4128"
+      url "https://github.com/latticeHQ/lattice-runtime/releases/download/v0.6.0/lattice_0.6.0_darwin_amd64.zip"
+      sha256 "ce67331576dbbac4abaac994e5cc3a8dad2078ab71a7acb6ba3eceeda0334aa8"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/latticeHQ/lattice-runtime/releases/download/v0.4.1/lattice_0.4.1_linux_arm64.tar.gz"
-      sha256 "91037186aed4a4eb5dbd426862553f643de006dafd4928049a9fbca450633f51"
+      url "https://github.com/latticeHQ/lattice-runtime/releases/download/v0.6.0/lattice_0.6.0_linux_arm64.tar.gz"
+      sha256 "62cb2a80a80f6f07807d80efc17e6bb4309f95cd201b4d0dd582cfb866e0ed68"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/latticeHQ/lattice-runtime/releases/download/v0.4.1/lattice_0.4.1_linux_amd64.tar.gz"
-      sha256 "192227e2e15b8c8df04bc368b5dd0e16ebdc963bc8cf224ea444de02a86ec2f0"
+      url "https://github.com/latticeHQ/lattice-runtime/releases/download/v0.6.0/lattice_0.6.0_linux_amd64.tar.gz"
+      sha256 "88cf664307aae02b322db34ffac2ae9b13b4d20baaa1a31cccedeb47a3978785"
     end
   end
 
