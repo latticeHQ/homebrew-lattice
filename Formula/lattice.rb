@@ -2,29 +2,29 @@
 # frozen_string_literal: true
 
 class Lattice < Formula
-  desc "Runtime enforcement and identity infrastructure for autonomous AI agents"
+  desc "A self-hosted remote development platform"
   homepage "https://latticeruntime.com"
-  version "0.7.0"
+  version "0.7.1"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/latticeHQ/lattice/releases/download/v0.7.0/lattice_0.7.0_darwin_arm64.zip"
-      sha256 "7bc9898cdf8158c53e4b5b7080956fa22fd4692fac28139908182d31f8006dc8"
+      url "https://github.com/latticeHQ/lattice-runtime/releases/download/v0.7.1/lattice_0.7.1_darwin_arm64.zip"
+      sha256 "551f3ea140cb3a0912353709219a801a355c3e7bd6c2cd4a56528106256b752c"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/latticeHQ/lattice/releases/download/v0.7.0/lattice_0.7.0_darwin_amd64.zip"
-      sha256 "03f8ee993d0826e6d71d5d607783b6fd4819eb76e293aaf97b1970d891ef3803"
+      url "https://github.com/latticeHQ/lattice-runtime/releases/download/v0.7.1/lattice_0.7.1_darwin_amd64.zip"
+      sha256 "4104e0ebeb40d17b61d36544a737595ed5fd6ab3a2a45a592fa19ed864837980"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/latticeHQ/lattice/releases/download/v0.7.0/lattice_0.7.0_linux_arm64.tar.gz"
-      sha256 "85ba83ea81bbce37c18e34573cb68c7b9116584d99ddab2ad908e74d3b2068ea"
+      url "https://github.com/latticeHQ/lattice-runtime/releases/download/v0.7.1/lattice_0.7.1_linux_arm64.tar.gz"
+      sha256 "aa6fe73005956ce400cdaea07159829ab98584bba47b60603fed40f064ac5bd8"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/latticeHQ/lattice/releases/download/v0.7.0/lattice_0.7.0_linux_amd64.tar.gz"
-      sha256 "d561fed57ec6f9b2ddf3d53c6c2b9e315fba4b30b6630460ba0a095ddc476302"
+      url "https://github.com/latticeHQ/lattice-runtime/releases/download/v0.7.1/lattice_0.7.1_linux_amd64.tar.gz"
+      sha256 "9e138e528c4759e8ae7cb91863a906019f8f02aa64a270c29da9dfb27fcdd9fe"
     end
   end
 
