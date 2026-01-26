@@ -2,15 +2,16 @@
 
 set -euo pipefail
 
-if [ "$#" -ne 4 ]; then
-  echo "Usage: $0 <version> <darwin_arm_sha> <darwin_intel_sha> <linux_sha>"
+if [ "$#" -ne 5 ]; then
+  echo "Usage: $0 <version> <darwin_arm_sha> <darwin_intel_sha> <linux_arm_sha> <linux_amd_sha>"
   exit 1
 fi
 
 VERSION=$1
 DARWIN_ARM_SHA=$2
 DARWIN_INTEL_SHA=$3
-LINUX_SHA=$4
+LINUX_ARM_SHA=$4
+LINUX_AMD_SHA=$5
 
 # Update Formula/lattice.rb
 cat > Formula/lattice.rb << EOF
@@ -36,11 +37,11 @@ class Lattice < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/latticeHQ/lattice/releases/download/v${VERSION}/lattice_${VERSION}_linux_arm64.tar.gz"
-      sha256 "${LINUX_SHA}"
+      sha256 "${LINUX_ARM_SHA}"
     end
     if Hardware::CPU.intel?
       url "https://github.com/latticeHQ/lattice/releases/download/v${VERSION}/lattice_${VERSION}_linux_amd64.tar.gz"
-      sha256 "${LINUX_SHA}"
+      sha256 "${LINUX_AMD_SHA}"
     end
   end
 
